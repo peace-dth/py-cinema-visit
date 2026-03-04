@@ -5,12 +5,12 @@ from app.people.cinema_staff import Cleaner
 
 
 def cinema_visit(
-        customers: list,
+        customers: list[dict[str, str]],
         hall_number: int,
         cleaner: str,
         movie: str
 ) -> None:
-    customer_list = []
+    customer_list: list[Customer] = []
     for customer in customers:
         customer_obj = Customer(
             name=customer["name"],
